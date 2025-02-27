@@ -3,6 +3,7 @@ const gridSizeInputField = document.querySelector('input');
 const clearGridButton = document.querySelector('.clear-grid-button');
 const coloringModeButtons = document.querySelectorAll('.coloring-mode-button');
 const currentModeContainer = document.querySelector('.current-mode-container');
+const confirmButton = document.querySelector('.confirm-button');
 
 let coloringMode = 'blackout';
 updateCurrentModeText();
@@ -18,6 +19,12 @@ function updateCurrentModeText() {
 function capitalize(string) {
     return `${string[0].toUpperCase()}${string.slice(1)}`
 } 
+
+confirmButton.addEventListener('click', () => {
+        generateGrid(gridSizeInputField.value);
+        gridSizeInputField.value = '';
+    }
+)
 
 coloringModeButtons.forEach(button => {
     button.addEventListener('click', () => {

@@ -43,13 +43,21 @@ body {
     cursor: default;
 }
 
-input {
-    padding: 10px;
-    width: 102px;
+.user-input-container {
     position: fixed;
     left: 50%;
     margin-left: -65px;
     top: 8px;
+}
+
+input {
+    padding: 10px;
+    width: 102px;
+}
+
+.confirm-button {
+    padding: 10px;
+    margin-left: -5px;
 }
 
 .coloring-mode-select-container {
